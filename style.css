@@ -8,4 +8,42 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    background: #010718;
+    overflow: hidden;
+}
+.container{
+    display: flex;
+    gap: 10px;
+}
+
+.container .text{
+    color: aqua;
+    font-size: 40px;
+    font-weight: 700;
+    position: relative;
+}
+.container .first-text{
+    color: chartreuse;
+    
+}
+
+.text.second-text:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #010718;
+    border-left: 4px solid aqua;
+    animation: animate 4s steps(12)  infinite ;
+}
+
+@keyframes animate{
+    40%, 60%{
+        left: 100%;
+    }
+    100%{
+        left: 0%;
+    }
 }

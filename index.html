@@ -4,11 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Auto-Typing-Letter</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <div class="text first-text">I'm a</div>
-        <div class="text second-text">Frelancer</div>
+        <div class="text second-text"></div>
     </div>
+    <script>
+        const text =document.querySelector(".second-text");
+        
+        const textLoad=()=>{
+            setTimeout(()=>{
+                text.textContent="Freelancer"
+            }, 0)
+            setTimeout(()=>{
+                text.textContent="Youtuber"
+            }, 4000)
+            setTimeout(()=>{
+                text.textContent="Blogger"
+            }, 8000)
+        }
+        textLoad();
+        setInterval(textLoad, 12000);
+    </script>
 </body>
 </html>
